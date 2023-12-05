@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/search_api
+    username: postgres
+    password: Emanuele00
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      jdbc:
+        lob:
+          '[non_contextual_creation]': true
+      hibernate:
+        '[format_sql]': true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

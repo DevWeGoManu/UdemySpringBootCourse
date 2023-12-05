@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/registration_db
+    username: postgres
+    password: Emanuele00
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      jdbc:
+        lob:
+          '[non_contextual_creation]': true
+      hibernate:
+        '[format_sql]': true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+  thymeleaf:
+    check-template-location: false
+  security:
+    user:
+      name: root
+      password: root
+      roles: ADMIN
